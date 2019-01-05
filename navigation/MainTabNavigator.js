@@ -6,7 +6,7 @@ import TabBarIcon from '../components/TabBarIcon';
 import HomeScreen from '../screens/HomeScreen';
 import DetailScreen from '../screens/DetailScreen';
 import LinksScreen from '../screens/LinksScreen';
-import SettingsScreen from '../screens/SettingsScreen';
+import CallScreen from '../screens/CallScreen';
 
 const HomeStack = createStackNavigator({
   Home: HomeScreen,
@@ -41,11 +41,11 @@ LinksStack.navigationOptions = {
   ),
 };
 
-const SettingsStack = createStackNavigator({
-  Settings: SettingsScreen,
+const CallStack = createStackNavigator({
+  Call: CallScreen,
 });
 
-SettingsStack.navigationOptions = {
+CallStack.navigationOptions = {
   tabBarLabel: 'Call',
   tabBarIcon: ({ focused }) => (
     <TabBarIcon
@@ -58,5 +58,5 @@ SettingsStack.navigationOptions = {
 export default createBottomTabNavigator({
   HomeStack,
   LinksStack,
-  SettingsStack,
+  CallStack,
 });
