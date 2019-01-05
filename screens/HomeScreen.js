@@ -1,16 +1,16 @@
 import React from 'react';
 import {
-  Image,
-  Platform,
-  ScrollView,
+  Alert,
   StyleSheet,
   Text,
   TouchableOpacity,
-  View,
+  FlatList,
+  View
 } from 'react-native';
-import { WebBrowser } from 'expo';
 
-import { MonoText } from '../components/StyledText';
+import Layout from '../constants/Layout'
+import Colors from '../constants/Colors'
+import Symptoms from '../constants/Symptoms'
 
 export default class HomeScreen extends React.Component {
   static navigationOptions = {
@@ -20,7 +20,23 @@ export default class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Test Home page</Text>
+        <View style={styles.header}>
+          <Text style={styles.headingTopic}>Symptoms</Text>
+        </View>
+        <FlatList
+          style={styles.symptomList}
+          data={Symptoms}
+          renderItem={({item}) => {
+            return (
+              <TouchableOpacity onPress={() => Alert.alert('You tapped the button!')}>
+                <View style={styles.symptomItem}>
+                  <Text style={styles.symptomName}>{item.name}</Text>
+                  <Text style={styles.symptomDescription}>{item.description}</Text>
+                </View>
+              </TouchableOpacity>
+            )
+          }}
+        />
       </View>
     );
   }
@@ -29,88 +45,39 @@ export default class HomeScreen extends React.Component {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    backgroundColor: '#fff',
+    backgroundColor: Colors.backgroundColor,
   },
-  developmentModeText: {
-    marginBottom: 20,
-    color: 'rgba(0,0,0,0.4)',
-    fontSize: 14,
-    lineHeight: 19,
-    textAlign: 'center',
+  header: {
+    backgroundColor: Colors.primaryColor,
+    height: 210,
   },
-  contentContainer: {
-    paddingTop: 30,
+  headingTopic: {
+    fontSize: 30,
+    color: '#fff',
+    marginTop: 50,
+    marginLeft: 15,
+    fontWeight: 'bold',
   },
-  welcomeContainer: {
-    alignItems: 'center',
-    marginTop: 10,
-    marginBottom: 20,
-  },
-  welcomeImage: {
-    width: 100,
-    height: 80,
-    resizeMode: 'contain',
-    marginTop: 3,
-    marginLeft: -10,
-  },
-  getStartedContainer: {
-    alignItems: 'center',
-    marginHorizontal: 50,
-  },
-  homeScreenFilename: {
-    marginVertical: 7,
-  },
-  codeHighlightText: {
-    color: 'rgba(96,100,109, 0.8)',
-  },
-  codeHighlightContainer: {
-    backgroundColor: 'rgba(0,0,0,0.05)',
-    borderRadius: 3,
-    paddingHorizontal: 4,
-  },
-  getStartedText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    lineHeight: 24,
-    textAlign: 'center',
-  },
-  tabBarInfoContainer: {
+  symptomList: {
     position: 'absolute',
-    bottom: 0,
     left: 0,
-    right: 0,
-    ...Platform.select({
-      ios: {
-        shadowColor: 'black',
-        shadowOffset: { height: -3 },
-        shadowOpacity: 0.1,
-        shadowRadius: 3,
-      },
-      android: {
-        elevation: 20,
-      },
-    }),
-    alignItems: 'center',
-    backgroundColor: '#fbfbfb',
-    paddingVertical: 20,
+    top: 0,
+    width: Layout.window.width,
+    height: Layout.window.height - 150,
+    marginTop: 100,
   },
-  tabBarInfoText: {
-    fontSize: 17,
-    color: 'rgba(96,100,109, 1)',
-    textAlign: 'center',
+  symptomItem: {
+    backgroundColor: '#fff',
+    marginHorizontal: 10,
+    marginVertical: 8,
+    borderRadius:10,
+    padding: 10,
   },
-  navigationFilename: {
-    marginTop: 5,
+  symptomName: {
+    fontWeight: 'bold',
+    fontSize: 18
   },
-  helpContainer: {
-    marginTop: 15,
-    alignItems: 'center',
-  },
-  helpLink: {
-    paddingVertical: 15,
-  },
-  helpLinkText: {
-    fontSize: 14,
-    color: '#2e78b7',
-  },
+  symptomDescription: {
+    fontSize: 16
+  }
 });
