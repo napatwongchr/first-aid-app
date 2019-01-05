@@ -2,8 +2,6 @@ import React from 'react';
 import {
   StyleSheet,
   Text,
-  TouchableOpacity,
-  FlatList,
   View
 } from 'react-native';
 
@@ -11,32 +9,23 @@ import Layout from '../constants/Layout'
 import Colors from '../constants/Colors'
 import Symptoms from '../constants/Symptoms'
 
-export default class HomeScreen extends React.Component {
+export default class DetailScreen extends React.Component {
   static navigationOptions = {
     header: null,
   };
 
   render() {
+    const symptomId = this.props.navigation.getParam('symptomId', 'NO-IDs')
+    const symptomDetail = Symptoms.filter(symptom => symptomId === symptom.key)
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headingTopic}>Symptoms</Text>
+          <Text style={styles.headingTopic}>Symptom Detail</Text>
         </View>
-        <FlatList
-          style={styles.symptomList}
-          data={Symptoms}
-          renderItem={({item}) => {
-            return (
-              <TouchableOpacity onPress={() => 
-                this.props.navigation.navigate('Detail', { symptomId: item.key })}>
-                <View style={styles.symptomItem}>
-                  <Text style={styles.symptomName}>{item.name}</Text>
-                  <Text style={styles.symptomDescription}>{item.description}</Text>
-                </View>
-              </TouchableOpacity>
-            )
-          }}
-        />
+        <View style={styles.symptomDetail}>
+          <Text style={styles.symptomName}>{symptomDetail[0].name}</Text>
+          <Text style={styles.symptomDescription}>{symptomDetail[0].description}</Text>
+        </View>
       </View>
     );
   }
@@ -58,22 +47,19 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     fontWeight: 'bold',
   },
-  symptomList: {
+  symptomDetail: {
     position: 'absolute',
-    width: Layout.window.width,
-    height: Layout.window.height - 150,
+    width: Layout.window.width - 18,
+    height: Layout.window.height,
     marginTop: 100,
-  },
-  symptomItem: {
     backgroundColor: '#fff',
-    marginHorizontal: 10,
-    marginVertical: 8,
+    margin: 10,
     borderRadius:10,
     padding: 10,
   },
   symptomName: {
     fontWeight: 'bold',
-    fontSize: 18
+    fontSize: 24
   },
   symptomDescription: {
     fontSize: 16
