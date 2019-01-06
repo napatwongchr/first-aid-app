@@ -39,9 +39,4 @@ export default [
     name: "หายใจไม่ออก",
     description: "หายใจไม่ออก"
   },
-  {
-    key: "9",
-    name: "123123",
-    description: "หายใจไม่ออก"
-  }
 ]

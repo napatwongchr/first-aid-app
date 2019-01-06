@@ -35,7 +35,9 @@ export default class App extends React.Component {
       ]),
       Font.loadAsync({
         ...Icon.Ionicons.font,
-        'k2d': require('./assets/fonts/K2D-Thin.ttf'),
+        'K2D-Regular': require('./assets/fonts/K2D-Regular.ttf'),
+        'K2D-Thin': require('./assets/fonts/K2D-Thin.ttf'),
+        'K2D-Bold': require('./assets/fonts/K2D-Bold.ttf'),
       }),
     ]);
   };

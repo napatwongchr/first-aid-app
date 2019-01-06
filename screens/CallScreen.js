@@ -21,7 +21,7 @@ export default class CallScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headingTopic}>Eymergency Call</Text>
+          <Text style={styles.headingTopic}>เบอร์โทรศัพท์ฉุกเฉิน</Text>
         </View>
         <FlatList
           style={styles.contactList}
@@ -53,16 +53,16 @@ const styles = StyleSheet.create({
   },
   headingTopic: {
     fontSize: 30,
+    fontFamily: 'K2D-Bold',
     color: '#fff',
     marginTop: 50,
     marginLeft: 15,
-    fontWeight: 'bold',
   },
   contactList: {
     position: 'absolute',
     width: Layout.window.width,
     height: Layout.window.height - 150,
-    marginTop: 100,
+    marginTop: 120,
   },
   contactItem: {
     flexDirection: 'row',
@@ -75,7 +75,7 @@ const styles = StyleSheet.create({
     padding: 30,
   },
   contactName: {
-    fontWeight: 'bold',
+    fontFamily: 'K2D-Bold',
     fontSize: 28
   },
 });
