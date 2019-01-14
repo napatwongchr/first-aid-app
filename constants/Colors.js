@@ -1,6 +1,6 @@
 export default {
-  primaryColor: '#324BCC',
+  primaryColor: '#00a9b8',
   backgroundColor: '#F2F3F5',
-  tabIconSelected: '#324BCC',
+  tabIconSelected: '#00a9b8',
   tabIconDefault: '#000',
 };
