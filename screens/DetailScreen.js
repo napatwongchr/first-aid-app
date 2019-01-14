@@ -20,9 +20,9 @@ export default class DetailScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headingTopic}>Symptom Detail</Text>
+          <Text style={styles.headingTopic}>ข้อมูลลักษณะอาการ</Text>
         </View>
-        <View style={styles.symptomDetail}>
+        <View style={styles.symptomDetailContainer}>
           <Text style={styles.symptomName}>{symptomDetail[0].name}</Text>
           <Text style={styles.symptomDescription}>{symptomDetail[0].description}</Text>
         </View>
@@ -41,27 +41,29 @@ const styles = StyleSheet.create({
     height: 210,
   },
   headingTopic: {
+    fontFamily: 'K2D-Bold',
     fontSize: 30,
     color: '#fff',
     marginTop: 50,
     marginLeft: 15,
-    fontWeight: 'bold',
   },
-  symptomDetail: {
+  symptomDetailContainer: {
     position: 'absolute',
     width: Layout.window.width - 18,
     height: Layout.window.height,
-    marginTop: 100,
     backgroundColor: '#fff',
     margin: 10,
+    marginTop: 120,
     borderRadius:10,
-    padding: 10,
+    padding: 15,
   },
   symptomName: {
-    fontWeight: 'bold',
-    fontSize: 24
+    fontFamily: 'K2D-Bold',
+    fontSize: 26
   },
   symptomDescription: {
-    fontSize: 16
+    fontFamily: 'K2D-Regular',
+    fontSize: 20,
+    marginTop: 5
   }
 });

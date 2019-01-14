@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "TutorialProject",
-    "slug": "TutorialProject",
+    "name": "Ambulance",
+    "slug": "Ambulance",
     "privacy": "public",
     "sdkVersion": "32.0.0",
     "platforms": [
@@ -24,6 +24,9 @@
     ],
     "ios": {
       "supportsTablet": true
+    },
+    "android": {
+      "package": "com.healthcarebaby.ambulance"
     }
   }
 }

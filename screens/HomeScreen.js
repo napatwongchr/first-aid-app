@@ -20,7 +20,7 @@ export default class HomeScreen extends React.Component {
     return (
       <View style={styles.container}>
         <View style={styles.header}>
-          <Text style={styles.headingTopic}>Symptoms</Text>
+          <Text style={styles.headingTopic}>ลักษณะอาการ</Text>
         </View>
         <FlatList
           style={styles.symptomList}
@@ -52,17 +52,17 @@ const styles = StyleSheet.create({
     height: 210,
   },
   headingTopic: {
+    fontFamily: 'K2D-Bold',
     fontSize: 30,
     color: '#fff',
     marginTop: 50,
     marginLeft: 15,
-    fontWeight: 'bold',
   },
   symptomList: {
     position: 'absolute',
     width: Layout.window.width,
-    height: Layout.window.height - 150,
-    marginTop: 100,
+    height: Layout.window.height - 175,
+    marginTop: 120,
   },
   symptomItem: {
     backgroundColor: '#fff',
@@ -72,10 +72,11 @@ const styles = StyleSheet.create({
     padding: 10,
   },
   symptomName: {
-    fontWeight: 'bold',
-    fontSize: 18
+    fontFamily: 'K2D-Bold',
+    fontSize: 22
   },
   symptomDescription: {
+    fontFamily: 'K2D-Regular',
     fontSize: 16
   }
 });
