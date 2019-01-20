@@ -31,7 +31,6 @@ export default class HomeScreen extends React.Component {
                 this.props.navigation.navigate('Detail', { symptomId: item.key })}>
                 <View style={styles.symptomItem}>
                   <Text style={styles.symptomName}>{item.name}</Text>
-                  <Text style={styles.symptomDescription}>{item.description}</Text>
                 </View>
               </TouchableOpacity>
             )
@@ -49,7 +48,7 @@ const styles = StyleSheet.create({
   },
   header: {
     backgroundColor: Colors.primaryColor,
-    height: 210,
+    height: 230,
   },
   headingTopic: {
     fontFamily: 'K2D-Bold',
