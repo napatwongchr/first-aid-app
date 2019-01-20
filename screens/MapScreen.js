@@ -1,6 +1,5 @@
 import React from 'react';
 import { Linking } from 'react-native';
-import { StackActions, NavigationActions } from 'react-navigation'
 
 export default class MapScreen extends React.Component {
   static navigationOptions = {
