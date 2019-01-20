@@ -43,6 +43,10 @@ export default [
       images: [
         {
           src: require('../assets/images/content_1.jpg'),
+          caption: null
+        },
+        {
+          src: require('../assets/images/content_1_2.jpg'),
           caption: 'ตำแหน่งการกดหน้าอก'
         }
       ],
@@ -109,7 +113,7 @@ export default [
         },
         {
           src: require('../assets/images/content_2_10.jpg'),
-          caption: 'แขนท่อนล่างหัก'
+          caption: 'กระดูกบริเวณข้อมือหัก'
         },
         {
           src: require('../assets/images/content_2_11.jpg'),
@@ -118,6 +122,14 @@ export default [
         {
           src: require('../assets/images/content_2_12.jpg'),
           caption: 'แขนท่อนบนหัก'
+        },
+        {
+          src: require('../assets/images/content_2_13.jpg'),
+          caption: null
+        },
+        {
+          src: require('../assets/images/content_2_14.jpg'),
+          caption: 'แขนท่อนล่างหัก'
         }
       ]
     }
@@ -179,7 +191,16 @@ export default [
 1.ใช้ผ้าชุบน้ำประคบบริเวณแผล หรือเปิดน้ำไหลผ่าน แล้วปิดด้วยผ้าสะอาด
 
 2.หากแผลมีขนาดใหญ่ให้นำส่งโรงพยาบาล
-`
+`, imageSet1: [
+    {
+      src: require('../assets/images/content_4_1.jpg'),
+      caption: null
+    },
+    {
+      src: require('../assets/images/content_4_2.jpg'),
+      caption: 'วัตถุปักคา'
+    }
+]
     }
   },
   {
@@ -212,7 +233,12 @@ export default [
 2.ล้างบาดแผลด้วยสบู่ และประคบเย็น
 
 3.หากมีอาการแพ้ แน่นหน้าอก ให้รีบนำไปโรงพยาบาลที่ใกล้ที่สุดทันที    
-`,
+`, imageSet1: [
+  {
+    src: require('../assets/images/content_5.jpg'),
+    caption: 'งูกัด'
+  }
+]
     }
   },
   {
@@ -272,7 +298,12 @@ export default [
       secondaryContent:`อุ้มทารกวางไว้บนหน้าตัก คว่ำลง ศีรษะต่ำเล็กน้อย ตบหลังระหว่างสะบักทั้ง 2 ข้าง จำนวน 5 ครั้ง
 หากสิ่งที่อุดกั้นยังไม่หลุดออก ให้พลิกทารกหงายขึ้น ศีรษะต่ำเล็กน้อย (ขณะพลิกให้ประคองคอทารกไว้ เนื่องจากกล้ามเนื้อและกระดูกคอของทารกยังไม่แข็งแรง)
 จากนั้นใช้สองนิ้วกดบนกระดูก 5 ครั้ง กดลึก 4-3 เซนติเมตร ทำสลับกันไปเรื่อยๆอย่างต่อเนื่องจนกว่าสิ่งที่อุดกั้นจะหลุดออก
-      `
+      `, imageSet1: [
+        {
+          src: require('../assets/images/content_9.jpg'),
+          caption: 'สิ่งแปลกปลอมอุดกั้นทางเดินหายใจ'
+        }
+      ]
     }
   },
   {
