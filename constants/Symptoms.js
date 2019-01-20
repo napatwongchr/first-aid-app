@@ -193,11 +193,11 @@ export default [
 2.หากแผลมีขนาดใหญ่ให้นำส่งโรงพยาบาล
 `, imageSet1: [
     {
-      src: require('../assets/images/content_4_1.jpg'),
+      src: require('../assets/images/content_4_2.jpg'),
       caption: null
     },
     {
-      src: require('../assets/images/content_4_2.jpg'),
+      src: require('../assets/images/content_4_1.jpg'),
       caption: 'วัตถุปักคา'
     }
 ]
