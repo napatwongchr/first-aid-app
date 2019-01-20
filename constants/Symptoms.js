@@ -40,7 +40,7 @@ export default [
 
 กดหน้าผาก เชยคางขึ้น จากนั้นให้ผู้ช่วยเหลือนำปากครอบจมูกละปากของเด็กให้สนิท เป่าปาก2ครั้ง โดยทุกครั้งต้องเห็นหน้าอกขยาย 
 `,
-      images: [
+      imageSet1: [
         {
           src: require('../assets/images/content_1.jpg'),
           caption: null
